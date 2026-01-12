@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>2ndpage </title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    height:100vh;
+    background:#050505;
+    overflow:hidden;
+    font-family:Arial,sans-serif;
+}
+
+/* ===== PARTICLES ===== */
+.particles{
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(1px 1px at 20% 30%,rgba(255,255,255,.08),transparent),
+      radial-gradient(1px 1px at 80% 50%,rgba(255,255,255,.1),transparent),
+      radial-gradient(1px 1px at 50% 80%,rgba(255,255,255,.06),transparent);
+    animation: particlesFlow 6s linear infinite;
+}
+
+/* ===== STRIP LIGHT ONLY ===== */
+.v-strip{
+    position:absolute;
+    width:170%;
+    height:10px;
+    left:-35%;
+    top:30%;
+    overflow:hidden;
+    background:transparent;
+}
+
+.v-strip::before{
+    content:"";
+    position:absolute;
+    left:-40%;
+    width:35%;
+    height:100%;
+    background:linear-gradient(90deg,transparent,white,transparent);
+    filter:blur(6px);
+    animation: stripFlow 6s linear infinite;
+}
+
+.v-strip.left{transform:rotate(45deg);}
+.v-strip.right{transform:rotate(-45deg);}
+
+
+
+
+/* ===== SYNCED ANIMATIONS ===== */
+@keyframes stripFlow{
+    from{left:-40%;}
+    to{left:120%;}
+}
+
+@keyframes buttonFlow{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+@keyframes particlesFlow{
+    from{transform:translateY(0);}
+    to{transform:translateY(-200px);}
+}
+</style>
+</head>
+
+<body id="body">
+
+<div class="particles"></div>
+
+<div class="v-strip left"></div>
+<div class="v-strip right"></div>
+<div class="gallary">
+<div class="imagebox" id="div1"> <img src="op.png" alt=""></div>
+<div class="imagebox"id="div2"> <img src="op.png" alt=""></div>
+<div class="imagebox"id="div3"> <img src="op.png" alt=""></div>
+<div class="imagebox"id="div4"> <img src="op.png" alt=""></div>
+<div class="imagebox"id="div5"> <img src="op.png" alt=""></div>
+<div class="imagebox"id="div6"> <img src="op.png" alt=""></div>
+</div>
+<!-- <script src ="script 2nd.js"></script> -->
+<link rel="stylesheet" href="csspage2.css">
+<script src ="script2nd.js"></script>
+</body>
+</html>
